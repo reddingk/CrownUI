@@ -1,0 +1,94 @@
+<div class="clinton3-home">
+  <div class="page-container">
+    <clt-header3></clt-header3>
+
+    <div class="page-body">
+      <div class="page-section home-img">
+        <div class="section-container">
+          <div class="back-img" back-img={{$ctrl.homeImg}}></div>
+          <div class="front-content">
+            <div class="title">Welcome To Clinton</div>
+            <div class="sub-title">African Methodist Episcopal Zion Church</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info Cards -->
+      <div class="page-section info-cards">
+        <div class="cards-container">
+          <div class="home-card col-{{card.size.height}} row-{{card.size.width}}" ng-repeat="card in $ctrl.infoCards">
+            <div class="home-card-container">
+              <div class="container-back {{card.background.type}}" ng-if="card.background.type == 'img'" back-img={{card.background.value}}></div>
+              <div class="container-back {{card.background.type}}" ng-if="card.background.type == 'color'" ng-style="{background: card.background.value}"></div>
+
+              <div class="card-icon"><i class="material-icons">{{card.icon}}</i></div>
+
+              <div class="container-front {{ card.size.text }}">
+                <div class="title">{{card.title}}</div>
+                <div class="text-container">
+                  <div class="text-object" ng-repeat="item in card.content">
+                    <div class="text" ng-if="item.type == 'text'">{{item.content}}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Join Us Section -->
+      <div class="page-section join-us">
+        <div class="section-container">
+          <div class="title">Join Us At Clinton</div>
+          <div class="cards-container">
+            <div class="card info">
+              <div class="card-container">
+                <div class="content-container">
+                  <div class="content address"><i class="material-icons">home</i> <span>{{$ctrl.churchInfo.address}}</span></div>
+                  <div class="content phone"><i class="material-icons">phone</i><span>{{$ctrl.churchInfo.phone}}</span></div>
+                  <div class="content email"><i class="material-icons">email</i><span>{{$ctrl.churchInfo.email}}</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card gallery">
+              <div class="card-container">
+                <div class="gallery-container">
+                  <div class="gallery-img" ng-repeat="img in $ctrl.churchGallery">
+                    <img ng-src="{{img}}">
+                  </div>
+                </div>
+                <div class="nav-container">
+                  <i class="material-icons">chevron_left</i>
+                  <i class="material-icons">chevron_right</i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Info Cards -->
+      <div class="page-section events">
+        <div class="section-container">
+          <div class="title">Upcoming Events</div>
+
+          <div class="events-container">
+            <div class="event" ng-repeat="event in $ctrl.upcomingEvents">
+              <div class="event-item event-date">{{event.date | date: 'dd MMM'}}</div>
+              <div class="event-item event-title">{{event.title}}</div>
+              <div class="event-item event-time">{{event.date | date: 'hh:mm a'}}</div>
+            </div>
+          </div>
+          <div class="nav-container">
+            <i class="material-icons">chevron_left</i>
+            <i class="material-icons">chevron_right</i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+  </div>
+
+</div>

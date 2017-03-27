@@ -3,7 +3,58 @@
   <clt-header2></clt-header2>
 
   <!-- Body -->
-  <div class="page-container"></div>
+  <div class="page-container">
+    <!-- Welcome section -->
+    <div class="home-section welcome">
+      <div class="content-container">
+        <div class="content-area"><img ng-src="{{$ctrl.churchGallery[0]}}" /></div>
+        <div class="content-area">
+          <div class="content-title">Welcome to Clinton</div>
+          <div class="content-text">{{$ctrl.churchInfo.welcome}}</div>
+        </div>
+      </div>
+    </div>
+    <!-- Events section -->
+    <div class="home-section events">
+      <div class="section-title">Upcoming Events</div>
+      <div class="events-container">
+        <div class="event" ng-repeat="event in $ctrl.upcomingEvents">
+          <div class="event-card">
+            <div class="event-obj event-left">
+              <div class="event-item event-date">{{event.date | date: 'dd' }}</div>
+              <div class="event-item event-month">{{event.date | date: 'MMM'}}</div>
+            </div>
+            <div class="event-obj event-right">
+              <div class="event-item event-title">{{event.title}}</div>
+              <div class="event-item event-time">{{event.date | date: 'hh:mm a'}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="event-nav">
+        <div class="event-item"></div>
+        <div class="event-item selected"></div>
+        <div class="event-item"></div>
+        <div class="event-item"></div>
+      </div>
+    </div>
+    <!-- Connected section -->
+    <div class="home-section connected">
+      <div class="section-title">Get Connected</div>
+      <div class="connected-container">
+        <div class="connected-card-container" ng-repeat="card in $ctrl.connectedCards">
+          <div class="connected-card" >
+            <div class="card-side side-left"><div class="back-img" back-img={{card.img}}></div></div>
+            <div class="card-side side-right">
+              <div class="side-title">{{card.title}}</div>
+              <div class="side-content">{{card.content}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
 </div>

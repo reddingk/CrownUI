@@ -13,7 +13,7 @@ workBenchApp.config(['$stateProvider', '$urlRouterProvider','$locationProvider',
         url: "/",
         views: {
           'content':{
-            component: 'clintonP1'
+            component: 'clintonP2'
           }
         }
       })

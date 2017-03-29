@@ -47,8 +47,6 @@
           .header-nav {
             display: inline-block;
             padding: 5px;
-            //.material-icons { line-height: 50px; vertical-align: middle; }
-            //span { line-height: 50px; vertical-align: middle;}
 
             .social-btn {
               border-radius: 50%;
@@ -57,7 +55,39 @@
               height: 40px;
               width: 40px;
               position: relative;
+              transition: 0.5s all ease-in-out;
               i{ font-size: 2rem; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+              &:after{
+                content: "";
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 0%;
+                height: 100%;
+                background-color: rgba(255,255,255,0.4);
+                -webkit-transition: none;
+                -moz-transition: none;
+                -ms-transition: none;
+                -o-transition: none;
+                transition: none;
+              }
+              &:hover{
+                //border-color: rgba(0,0,0,1);
+                color: rgba(255,255,255,1);
+                &.instagram-btn { background:rgba(195, 42, 163,1); }
+                &.facebook-btn { background:rgba(59, 89, 152,1); }
+                &.twitter-btn { background:rgba(0, 182, 241,1); }
+
+                &:after {
+                  width: 120%;
+                  background-color: rgba(255,255,255,0);
+                  -webkit-transition: all 0.5s ease-out;
+                  -moz-transition: all 0.5s ease-out;
+                  -ms-transition: all 0.5s ease-out;
+                  -o-transition: all 0.5s ease-out;
+                  transition: all 0.5s ease-out;
+                }
+              }
             }
             &.watch-btn {
               .btn-container {
@@ -319,7 +349,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
-        
+
         .welcome-text {
           width: 70%;
           text-align: center;

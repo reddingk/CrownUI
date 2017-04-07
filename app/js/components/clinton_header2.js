@@ -21,7 +21,7 @@ components.component('cltHeader2', {
 
       ctrl.selectedNav = ctrl.navigation[2];
 
-      ctrl.mainImg = "imgs/clinton/p4.jpg";
+      ctrl.mainImg = "imgs/clinton/pt3.jpg";
    },
    templateUrl: 'views/clinton/templates/header2.html'
 });

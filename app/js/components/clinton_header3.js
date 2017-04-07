@@ -6,6 +6,8 @@ components.component('cltHeader3', {
 	controller: function () {
       var ctrl = this;
 
+      ctrl.navigation = ["About Us", "Get Connected", "Ministries", "Our Pastor", "Media", "News & Events"];
+
    },
    templateUrl: 'views/clinton/templates/header3.html'
 });

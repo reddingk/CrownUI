@@ -6,7 +6,7 @@ components.component('clintonP3', {
 	controller: function () {
       var ctrl = this;
 
-      ctrl.homeImg = "imgs/clinton/p4.jpg";
+      ctrl.homeImg = "imgs/clinton/c1.jpg";
 
       ctrl.infoCards = [
         {
@@ -34,7 +34,7 @@ components.component('clintonP3', {
           "title":"Live Stream",
           "icon":"live_tv",
           "content":[{"type":"text", "content":"Watch previous church services, and live service streams every Sunday at 10:30am."} ],
-          "background":{"type":"color", "value":"rgba(90, 200, 68, 1)"},
+          "background":{"type":"color", "value":"rgba(148,15,166,0.5)"},
           "size":{ "height":2, "width":1, "text":"med"}
         }
       ];

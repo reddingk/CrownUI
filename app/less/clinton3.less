@@ -9,16 +9,19 @@
   @ameGreen: rgba(0, 254, 9, 1);
   font-size: 16px;
 
-  
+
   /*Main*/
   padding: 50px 30px;
   height: 100%;
   //background: @amePurpleLite;
 
   // Rose
-  background: rgba(214,109,117,0.5);
-  background: -webkit-linear-gradient(to left, rgba(214,109,117,0.5) , rgba(226,149,135,0.5));
-  background: linear-gradient(to left, rgba(214,109,117,0.5) , rgba(226,149,135,0.5));
+  //background: rgba(214,109,117,0.5);
+  //background: -webkit-linear-gradient(to left, rgba(214,109,117,0.5) , rgba(226,149,135,0.5));
+  //background: linear-gradient(to left, rgba(214,109,117,0.5) , rgba(226,149,135,0.5));
+
+  // Purple
+  background-image: linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
 
 
   //font-family: 'Candal', sans-serif;
@@ -32,10 +35,10 @@
     box-shadow: rgba(0, 0, 0, 0.3) 0 1px 20px;
     overflow: hidden;
 
-    background: rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.9);
     .header{
       //background: rgba(0,0,0,0.1);
-      height: 90px;
+      //height: 90px;
       width: 100%;
       overflow: hidden;
       .header-container {
@@ -68,6 +71,15 @@
             &+.nav-icons { margin-left: 20px; }
           }
           &:after { clear: both; }
+        }
+        &.sub-nav {
+          background: rgba(0,0,0,.2);
+          padding: 10px 10%;
+          .nav-container {
+            display: flex;
+            justify-content: space-between;
+            .nav-item { a{ color: rgba(0,0,0,1) !important; }}
+          }
         }
       }
     }

@@ -6,7 +6,7 @@ components.component('clintonP2', {
 	controller: function () {
       var ctrl = this;
 
-      ctrl.homeImg = "imgs/clinton/p4.jpg";
+      ctrl.homeImg = "imgs/clinton/pt1.jpg";
 
 
       ctrl.churchInfo = { "address":"223 Elizabeth Avenue Rockville, MD 20850", "phone":"301-340-7942", "fax":"301-825-8938", "email":"camez223@aol.com", "welcome":"Our vision is to affect a completely transformed community of faith, worthy of citizenship in the Kingdom of God, by the power of God through His Son Jesus Christ. Our mission is to produce ministries that will serve the CAUSE of Christ through the spiritual transformation of minds, bodies and spirits. Sunday morning worship services begin at 10:00 AM." };

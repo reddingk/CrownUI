@@ -115,7 +115,7 @@ components.component('clintonP1', {
 	controller: function () {
       var ctrl = this;
 
-      ctrl.mainImg = "imgs/clinton/p4.jpg";
+      ctrl.mainImg = "imgs/clinton/pt2.jpg";
 
 
       ctrl.churchInfo = { "address":"223 Elizabeth Avenue Rockville, MD 20850", "phone":"301-340-7942", "fax":"301-825-8938", "email":"camez223@aol.com", "welcome":"Our vision is to affect a completely transformed community of faith, worthy of citizenship in the Kingdom of God, by the power of God through His Son Jesus Christ. Our mission is to produce ministries that will serve the CAUSE of Christ through the spiritual transformation of minds, bodies and spirits. Sunday morning worship services begin at 10:00 AM." };
@@ -151,7 +151,7 @@ components.component('clintonP2', {
 	controller: function () {
       var ctrl = this;
 
-      ctrl.homeImg = "imgs/clinton/p4.jpg";
+      ctrl.homeImg = "imgs/clinton/pt1.jpg";
 
 
       ctrl.churchInfo = { "address":"223 Elizabeth Avenue Rockville, MD 20850", "phone":"301-340-7942", "fax":"301-825-8938", "email":"camez223@aol.com", "welcome":"Our vision is to affect a completely transformed community of faith, worthy of citizenship in the Kingdom of God, by the power of God through His Son Jesus Christ. Our mission is to produce ministries that will serve the CAUSE of Christ through the spiritual transformation of minds, bodies and spirits. Sunday morning worship services begin at 10:00 AM." };
@@ -176,7 +176,7 @@ components.component('clintonP3', {
 	controller: function () {
       var ctrl = this;
 
-      ctrl.homeImg = "imgs/clinton/p4.jpg";
+      ctrl.homeImg = "imgs/clinton/c1.jpg";
 
       ctrl.infoCards = [
         {
@@ -204,7 +204,7 @@ components.component('clintonP3', {
           "title":"Live Stream",
           "icon":"live_tv",
           "content":[{"type":"text", "content":"Watch previous church services, and live service streams every Sunday at 10:30am."} ],
-          "background":{"type":"color", "value":"rgba(90, 200, 68, 1)"},
+          "background":{"type":"color", "value":"rgba(148,15,166,0.5)"},
           "size":{ "height":2, "width":1, "text":"med"}
         }
       ];
@@ -271,7 +271,7 @@ components.component('cltHeader2', {
 
       ctrl.selectedNav = ctrl.navigation[2];
 
-      ctrl.mainImg = "imgs/clinton/p4.jpg";
+      ctrl.mainImg = "imgs/clinton/pt3.jpg";
    },
    templateUrl: 'views/clinton/templates/header2.html'
 });
@@ -283,6 +283,8 @@ components.component('cltHeader3', {
   },
 	controller: function () {
       var ctrl = this;
+
+      ctrl.navigation = ["About Us", "Get Connected", "Ministries", "Our Pastor", "Media", "News & Events"];
 
    },
    templateUrl: 'views/clinton/templates/header3.html'

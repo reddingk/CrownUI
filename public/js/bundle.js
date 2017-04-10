@@ -126,7 +126,7 @@ components.component('clintonP1', {
         {"title":"Christian Education","image":"imgs/clinton/subimgs/christian1.jpg"},{"title":"Community Collaborations for Outreach","image":"imgs/clinton/subimgs/community.jpg"},{"title":"Health Ministry","image":"imgs/clinton/subimgs/health1.jpg"},
         {"title":"Lay Council","image":"imgs/clinton/subimgs/biblestudy.jpg"},{"title":"Men's Outreach","image":"imgs/clinton/subimgs/men1.jpg"},{"title":"Small Group Fellowship","image":"imgs/clinton/subimgs/smallGroup.jpg"}
       ];
-      ctrl.spacerImage = "imgs/clinton/p6.jpg";
+      ctrl.spacerImage = "imgs/clinton/m9.jpg";
       ctrl.welcomeImg = "imgs/clinton/pastor1.jpg";
       ctrl.welcomeBack = "imgs/clinton/bgNew.png";
       ctrl.connectedCards = [

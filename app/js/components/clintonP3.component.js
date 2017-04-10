@@ -6,7 +6,7 @@ components.component('clintonP3', {
 	controller: function () {
       var ctrl = this;
 
-      ctrl.homeImg = "imgs/clinton/c1.jpg";
+      ctrl.homeImg = "imgs/clinton/pt6.jpg";
 
       ctrl.infoCards = [
         {

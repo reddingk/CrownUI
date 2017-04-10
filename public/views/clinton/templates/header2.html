@@ -20,16 +20,16 @@
       <div class="cover-img" back-img={{$ctrl.mainImg}}></div>
     </div>
     <div class="nav-links">
-      <div class="nav-button" ng-repeat="nav in $ctrl.navigation" ng-class="{'selected':nav == $ctrl.selectedNav}"><div class="button-container">{{nav.title}}</div></div>
+      <div class="nav-button" ng-repeat="nav in $ctrl.navigation" ng-class="{'selected':nav == $ctrl.selectedNav}" ng-click="$ctrl.selectNav(nav)"><div class="button-container">{{nav.title}}</div></div>
     </div>
   </div>
   <div class="header-sub">
     <div class="nav-ctrl nav-left"><i class="material-icons">chevron_left</i></div>
     <div class="nav-cards">
-      <div class="nav-card" ng-repeat="card in $ctrl.selectedNav.subSections" ui-sref="app.clinton2.ministries">
+      <a class="nav-card" ng-repeat="card in $ctrl.selectedNav.subSections" href="https://html5up.net/dimension" target="_blank">
         <div class="card-back" back-img={{card.image}}></div>
         <div class="card-title">{{card.title}}</div>
-      </div>
+      </a>
     </div>
     <div class="nav-ctrl nav-right"><i class="material-icons">chevron_right</i></div>
   </div>

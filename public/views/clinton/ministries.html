@@ -39,7 +39,7 @@
                 <br>Assistant Directors of Youth: Mrs. Shirley Alexis & Mr. Robert Moore
               </p>
   						<ul class="actions">
-  							<li><a href="#first" class="button special color1 circle icon fa-angle-right">Next</a></li>
+  							<li><a class="button special color1 circle icon fa-angle-right">Next</a></li>
   						</ul>
   					</div>
   					<div class="image filtered span-1-75" data-position="25% 25%">
@@ -109,6 +109,33 @@
   					</div>
   				</section>
 
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="c1-Footer">
+      <div class="footer-container">
+        <div class="footer-row split-row">
+          <div class="row-split row-left">
+            <div class="footer-row ame-logo"><img src="imgs/clinton/ame_zion_logo.png" /></div>
+            <div class="footer-row address-text">
+              <div class="add-info">223 Elizabeth Avenue</div>
+              <div class="add-info">Rockville, MD 20850</div>
+            </div>
+          </div>
+          <div class="row-split row-right">
+            <div class="footer-row address-items" ng-repeat="item in $ctrl.churchHierarchy">
+              <div class="add-name">{{item.name}}</div>
+              <div class="add-title">{{item.title}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-row footer-btn-container">
+          <div class="footer-btn">
+            <div class="btn-container"><i class="material-icons">contact_mail</i><span>Contact Us</span></div>
+            <div class="btn-container"><i class="material-icons">blur_circular</i><span>Prayer Requests</span></div>
+          </div>
         </div>
       </div>
     </div>

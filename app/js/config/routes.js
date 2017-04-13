@@ -4,7 +4,7 @@ workBenchApp.config(['$stateProvider', '$urlRouterProvider','$locationProvider',
         url: "/",
         views: {
           'content':{
-            component: 'clintonP1'
+            component: 'clintonP2'
           }
         }
       })
@@ -29,6 +29,14 @@ workBenchApp.config(['$stateProvider', '$urlRouterProvider','$locationProvider',
         views: {
           'content@': {
             component: 'clintonMinistries'
+          }
+        }
+      })
+      .state('app.clinton1', {
+        url: "Clinton1",
+        views: {
+          'content@': {
+            component: 'clintonP1'
           }
         }
       })

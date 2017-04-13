@@ -61,9 +61,21 @@
           .nav-icons {
             display: inline-block;
             height: 70px;
+            vertical-align: top;
             &.live { }
             &.search { }
             &.menu { }
+            .social-btn {
+              border-radius: 6px;
+              border: 2px solid rgba(0,0,0,1);
+              color: rgba(0,0,0,1);
+              height: 25px;
+              width: 25px;
+              position: relative;
+              margin: 24px 0px;
+              transition: 0.5s all ease-in-out;
+              i{ font-size: 1.2rem; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); line-height: inherit;}
+            }
 
             i{ line-height: 20px; padding: 25.5px 0px; vertical-align: middle; }
             span { line-height: 20px; padding: 25.5px 0px; vertical-align: middle; }

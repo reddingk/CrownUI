@@ -13,7 +13,7 @@ workBenchApp.config(['$stateProvider', '$urlRouterProvider','$locationProvider',
         url: "/",
         views: {
           'content':{
-            component: 'clintonP1'
+            component: 'clintonP2'
           }
         }
       })
@@ -38,6 +38,14 @@ workBenchApp.config(['$stateProvider', '$urlRouterProvider','$locationProvider',
         views: {
           'content@': {
             component: 'clintonMinistries'
+          }
+        }
+      })
+      .state('app.clinton1', {
+        url: "Clinton1",
+        views: {
+          'content@': {
+            component: 'clintonP1'
           }
         }
       })
@@ -102,7 +110,13 @@ components.component('clintonMinistries', {
   },
 	controller: function () {
       var ctrl = this;
-
+      ctrl.churchHierarchy = [
+        {"name":"Mid-Atlantic Episcopal District", "title":"Philadelphia & Baltimore Conference, Baltimore District"},
+        {"name":"The Reverend Alyce R. Walker Johnson", "title":"Pastor"},
+        {"name":"The Reverend Lowell A. Williams", "title":"Presiding Elder, Baltimore District"},
+        {"name":"Mrs. Devieta C. Moore", "title":"Missionary Supervisor, Mid-Atlantic II Episcopal District"},
+        {"name":"The Right Reverend W. Darin Moore", "title":"Presiding Prelate, Mid-Atlantic II Episcopal District"}
+      ];
    },
    templateUrl: 'views/clinton/ministries.html'
 });
@@ -136,6 +150,13 @@ components.component('clintonP1', {
         {"title":"Bible Study", "img":"imgs/clinton/subimgs/biblestudy.jpg", "content":"Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
       ];
 
+      ctrl.churchHierarchy = [
+        {"name":"Mid-Atlantic Episcopal District", "title":"Philadelphia & Baltimore Conference, Baltimore District"},
+        {"name":"The Reverend Alyce R. Walker Johnson", "title":"Pastor"},
+        {"name":"The Reverend Lowell A. Williams", "title":"Presiding Elder, Baltimore District"},
+        {"name":"Mrs. Devieta C. Moore", "title":"Missionary Supervisor, Mid-Atlantic II Episcopal District"},
+        {"name":"The Right Reverend W. Darin Moore", "title":"Presiding Prelate, Mid-Atlantic II Episcopal District"}
+      ];
       ctrl.getNumber = function(num) {
           return new Array(num);
       }

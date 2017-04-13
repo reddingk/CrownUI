@@ -4,13 +4,15 @@
   /* Variables*/
   @amePurple: rgba(148,15,166,1);
   @amePurpleLite: rgba(148,15,166,0.3);
+  @darkPurple: rgba(66, 39, 90,1);
+  @darkPurpleLite: rgba(66, 39, 90,0.3);
 
   @ameBlue: rgba(0,141,213,1);
   @ameBlueLite: rgba(0,141,213,0.3);
 
   @ameGreen: rgba(0, 254, 9, 1);
-  font-size: 16px;
 
+  font-size: 16px;
   font-family: 'Raleway', sans-serif;
   //font-family: 'Coming Soon', cursive;
 
@@ -47,12 +49,40 @@
         float: right;
         height: 90px;
         padding: 0px 20px;
+        .social-container {
+          display: inline-block;
+          height: 90px;
+          padding: 25px 0px;
+          margin: 0px 20px;
+          .social-media {
+            border: 2px solid rgba(255,255,255,1);
+            border-radius: 20px;
+            padding: 5px 20px;
+            overflow: hidden;
+            display: inline-block;
+            .nav-icons {
+              height: initial;
+              i{
+                line-height: initial; padding: 0px;
+                transition: 0.7s all ease-in-out;
+                &:hover {
+                  &.fa-instagram { color:rgba(195, 42, 163,1); }
+                  &.fa-facebook { color:rgba(59, 89, 152,1); }
+                  &.fa-twitter { color:rgba(0, 182, 241,1); }
+                }
+              }
+            }
+
+          }
+        }
         .nav-icons {
           display: inline-block;
           height: 90px;
+          vertical-align: top;
           &.live { }
           &.search { }
           &.menu { }
+          &.give { }
 
           i{ line-height: 20px; padding: 35px 0px; vertical-align: middle; }
           span { line-height: 20px; padding: 35px 0px; vertical-align: middle; }
@@ -103,7 +133,7 @@
             background: rgba(0,0,0,0.5);
             color:rgba(255,255,255,1);
             padding: 5px 20px;
-            border-radius: 5px;
+            border-radius: 20px;
           }
           &.selected { .button-container { color: @amePurple; } }
         }
@@ -190,7 +220,8 @@
         }
       }
       &.events {
-        background-color: @amePurpleLite;
+        //background-color: @amePurpleLite;
+        background: linear-gradient(to right, @amePurpleLite, @darkPurpleLite);
         .events-container {
           display: flex;
           padding: 5px 50px;
@@ -262,7 +293,7 @@
                 }
 
                 &.side-left { }
-                &.side-right { padding: 20px; background-color: @amePurple; color:rgba(255,255,255,1); }
+                &.side-right { padding: 20px; /*background-color: @amePurple;*/background: linear-gradient(to right, @darkPurpleLite, @amePurple); color:rgba(255,255,255,1); }
               }
             }
           }

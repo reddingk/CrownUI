@@ -27,6 +27,13 @@ components.component('clintonP1', {
         {"title":"Bible Study", "img":"imgs/clinton/subimgs/biblestudy.jpg", "content":"Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
       ];
 
+      ctrl.churchHierarchy = [
+        {"name":"Mid-Atlantic Episcopal District", "title":"Philadelphia & Baltimore Conference, Baltimore District"},
+        {"name":"The Reverend Alyce R. Walker Johnson", "title":"Pastor"},
+        {"name":"The Reverend Lowell A. Williams", "title":"Presiding Elder, Baltimore District"},
+        {"name":"Mrs. Devieta C. Moore", "title":"Missionary Supervisor, Mid-Atlantic II Episcopal District"},
+        {"name":"The Right Reverend W. Darin Moore", "title":"Presiding Prelate, Mid-Atlantic II Episcopal District"}
+      ];
       ctrl.getNumber = function(num) {
           return new Array(num);
       }

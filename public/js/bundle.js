@@ -141,7 +141,7 @@ components.component('clintonP1', {
         {"title":"Lay Council","image":"imgs/clinton/subimgs/biblestudy.jpg"},{"title":"Men's Outreach","image":"imgs/clinton/subimgs/men1.jpg"},{"title":"Small Group Fellowship","image":"imgs/clinton/subimgs/smallGroup.jpg"}
       ];
       ctrl.spacerImage = "imgs/clinton/m9.jpg";
-      ctrl.welcomeImg = "imgs/clinton/pastor1.jpg";
+      ctrl.welcomeImg = "imgs/clinton/pastor2.jpeg";
       ctrl.welcomeBack = "imgs/clinton/bgNew.png";
       ctrl.connectedCards = [
         {"title":"Watch Live", "img":"imgs/clinton/p6.jpg", "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."},
@@ -184,6 +184,13 @@ components.component('clintonP2', {
         {"title":"Small Groups", "img":"imgs/clinton/subimgs/s2.jpg", "content":"Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."},
         {"title":"Church Services", "img":"imgs/clinton/Clinton_2012.jpg", "content":"Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."},
         {"title":"Bible Study", "img":"imgs/clinton/subimgs/biblestudy.jpg", "content":"Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
+      ];
+      ctrl.churchHierarchy = [
+        {"name":"Mid-Atlantic Episcopal District", "title":"Philadelphia & Baltimore Conference, Baltimore District"},
+        {"name":"The Reverend Alyce R. Walker Johnson", "title":"Pastor"},
+        {"name":"The Reverend Lowell A. Williams", "title":"Presiding Elder, Baltimore District"},
+        {"name":"Mrs. Devieta C. Moore", "title":"Missionary Supervisor, Mid-Atlantic II Episcopal District"},
+        {"name":"The Right Reverend W. Darin Moore", "title":"Presiding Prelate, Mid-Atlantic II Episcopal District"}
       ];
    },
    templateUrl: 'views/clinton/home2.html'

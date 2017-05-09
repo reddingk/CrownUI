@@ -69,6 +69,19 @@
         </div>
       </div>
 
+
+      <!-- Church Hierarchy -->
+      <div class="page-section hierarchy">
+        <div class="section-container">
+          <div class="hierarchy-item" ng-repeat="item in $ctrl.churchHierarchy">
+            <div class="item-container">
+              <div class="add-name">{{item.name}}</div>
+              <div class="add-title">{{item.title}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Events Cards -->
       <div class="page-section events">
         <div class="section-container">
@@ -88,33 +101,22 @@
         </div>
       </div>
 
-      <!-- Church Hierarchy -->
-      <div class="page-section hierarchy">
-        <div class="section-container">
-          <div class="hierarchy-item" ng-repeat="item in $ctrl.churchHierarchy">
-            <div class="item-container">
-              <div class="add-name">{{item.name}}</div>
-              <div class="add-title">{{item.title}}</div>
-            </div>
-          </div>
+    </div>
+  </div>
+
+  <!-- Test Footer -->
+  <div class="c3-footer-test">
+    <div class="footer-container">
+      <div class="footer-section">
+        <div class="section-title">Links</div>
+        <div class="section-links">
+          <div class="link-item" ng-repeat="links in $ctrl.footerLinks">{{ links }}</div>
         </div>
       </div>
-    </div>
-
-    <!-- Footer -->
-    <div class="c3-footer">
-      <div class="footer-container">
-        <div class="footer-section">
-          <div class="section-title">Links</div>
-          <div class="section-links">
-            <div class="link-item" ng-repeat="links in $ctrl.footerLinks">{{ links }}</div>
-          </div>
-        </div>
-        <div class="footer-section">
-          <div class="section-title">Find Out More</div>
-          <div class="section-message">Do you want to find out more about Clinto AME Zion Church, or reach out to us.</div>
-          <div class="contact-btn"><span>Contact Us</span></div>
-        </div>
+      <div class="footer-section">
+        <div class="section-title">Find Out More</div>
+        <div class="section-message">Do you want to find out more about Clinto AME Zion Church, or reach out to us.</div>
+        <div class="contact-btn"><span>Contact Us</span></div>
       </div>
     </div>
   </div>

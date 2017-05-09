@@ -33,10 +33,25 @@
     .header-container {
       padding: 5px 10px;
       overflow: hidden;
+
+      display: flex;
+      justify-content: space-between;
       .header-section {
         display: inline-block;
         &.header-left { }
-        &.header-right { float: right; text-align: right;}
+        &.header-center {
+          font-weight: bold;
+          font-size: 1.7rem;
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          padding: 20px 10px;
+          color: @amePurple;
+          span {  }
+        }
+        &.header-right { float: right; text-align: right; min-width: 45%;}
 
         .header-icon { height: 100px; img { height: 100%; }}
         .header-split {

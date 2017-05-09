@@ -243,9 +243,18 @@ components.component('clintonP3', {
         "fax":"301-825-8938",
         "email":"camez223@aol.com"
       };
+      ctrl.churchHierarchy = [
+        {"name":"Mid-Atlantic Episcopal District", "title":"Philadelphia & Baltimore Conference, Baltimore District"},
+        {"name":"The Reverend Alyce R. Walker Johnson", "title":"Pastor"},
+        {"name":"The Reverend Lowell A. Williams", "title":"Presiding Elder, Baltimore District"},
+        {"name":"Mrs. Devieta C. Moore", "title":"Missionary Supervisor, Mid-Atlantic II Episcopal District"},
+        {"name":"The Right Reverend W. Darin Moore", "title":"Presiding Prelate, Mid-Atlantic II Episcopal District"}
+      ];
 
       ctrl.churchGallery = ["imgs/clinton/p1.jpg", "imgs/clinton/p8.jpg", "imgs/clinton/p2.jpg", "imgs/clinton/p7.jpg", "imgs/clinton/p3.jpg", "imgs/clinton/p6.jpg"];
       ctrl.upcomingEvents = [{"date":new Date("2016-03-25 21:00:00"), "title":"Chorale Ensemble Choir Rehearsal"},{"date":new Date("2016-03-27 19:00:00"), "title":"TIPS Bible Study @Dorothy Day Place"},{"date":new Date("2016-03-25 19:30:00"), "title":"Children & Youth Choir Rehearsal"}  ];
+
+      ctrl.footerLinks = ["About Us", "Ministries", "Our Pastor", "Events","Our History","Galleries", "Inside Zion"];
    },
    templateUrl: 'views/clinton/home3.html'
 });

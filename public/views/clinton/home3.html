@@ -44,6 +44,7 @@
             <div class="card info">
               <div class="card-container">
                 <div class="content-container">
+                  <div class="content title">Contact Information</div>
                   <div class="content address"><i class="material-icons">home</i> <span>{{$ctrl.churchInfo.address}}</span></div>
                   <div class="content phone"><i class="material-icons">phone</i><span>{{$ctrl.churchInfo.phone}}</span></div>
                   <div class="content email"><i class="material-icons">email</i><span>{{$ctrl.churchInfo.email}}</span></div>
@@ -68,7 +69,7 @@
         </div>
       </div>
 
-      <!-- Info Cards -->
+      <!-- Events Cards -->
       <div class="page-section events">
         <div class="section-container">
           <div class="title">Upcoming Events</div>
@@ -86,9 +87,36 @@
           </div>
         </div>
       </div>
+
+      <!-- Church Hierarchy -->
+      <div class="page-section hierarchy">
+        <div class="section-container">
+          <div class="hierarchy-item" ng-repeat="item in $ctrl.churchHierarchy">
+            <div class="item-container">
+              <div class="add-name">{{item.name}}</div>
+              <div class="add-title">{{item.title}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Footer -->
+    <div class="c3-footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <div class="section-title">Links</div>
+          <div class="section-links">
+            <div class="link-item" ng-repeat="links in $ctrl.footerLinks">{{ links }}</div>
+          </div>
+        </div>
+        <div class="footer-section">
+          <div class="section-title">Find Out More</div>
+          <div class="section-message">Do you want to find out more about Clinto AME Zion Church, or reach out to us.</div>
+          <div class="contact-btn"><span>Contact Us</span></div>
+        </div>
+      </div>
+    </div>
   </div>
 
 </div>

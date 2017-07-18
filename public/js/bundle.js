@@ -280,7 +280,7 @@ components.component('cltHeader1', {
         {"title":"News & Events", "subSections":[]}
       ];
 
-      ctrl.headerLogo = "imgs/clinton/Clinton_logo3.png";
+      ctrl.headerLogo = "imgs/clinton/Clinton_logo4.png";
    },
    templateUrl: 'views/clinton/templates/header1.html'
 });

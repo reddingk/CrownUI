@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa|Nobile|Questrial');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Nobile|Questrial|Lora|Ovo');
 
 .clinton3-home{
   /* Variables*/
@@ -26,7 +26,9 @@
 
   //font-family: 'Candal', sans-serif;
   //font-family: 'Nobile', sans-serif;
-  font-family: 'Questrial', sans-serif;
+  //font-family: 'Questrial', sans-serif;  
+  //font-family: 'Lora', serif;  
+  font-family: 'Ovo', serif;
 
   .page-container {
     //border: 1px solid;
@@ -92,7 +94,15 @@
           .nav-container {
             display: flex;
             justify-content: space-between;
-            .nav-item { a{ color: rgba(0,0,0,1) !important; }}
+            .nav-item { 
+              padding: 0px 10px;
+              border-radius: 10%;
+              a{ color: rgba(0,0,0,1) !important; }
+              &:hover {
+                background: rgba(255,255,255,0.4);                                     
+                a{ text-decoration: none; }
+              }
+            }
           }
         }
       }
@@ -131,7 +141,7 @@
               left: 0;
               transform: translateY(-50%);
               text-align: center;
-              .title { font-weight: bold; font-size: 8rem;}
+              .title { font-size: 8rem;}
               .sub-title { font-size: 2rem;}
             }
           }
@@ -218,8 +228,9 @@
           background: url('../imgs/clinton/bgNEW.png');
           background-repeat: no-repeat;
           background-size: cover;
-          background-color: rgba(200,200,200,1);
+          background-color: rgba(20,20,20,1);
           background-position-y: 20%;
+          color:rgba(255,255,255,1);
           .section-container {
             .title { text-align: center; font-size: 5rem; font-weight: bold; }
             .cards-container {
@@ -229,7 +240,7 @@
                 padding: 10px;
                 .card-container {
                   padding: 10px;
-                  border: 1px solid rgba(0,0,0,0.5);
+                  border: 1px solid rgba(255,255,255,0.5);
                   border-radius: 4px;
                   height: 100%;
                   .content-container {
@@ -264,9 +275,9 @@
                   .nav-container {
                     text-align: right;
                     padding: 5px 10px;
-                    border-bottom: 1px solid rgba(0,0,0,1);
+                    border-bottom: 1px solid rgba(255,255,255,1);
                     i {
-                      &+i{ mergin-left: 10px;}
+                      &+i{ margin-left: 10px;}
                     }
                   }
                 }
@@ -309,7 +320,9 @@
 
         &.hierarchy {
           padding: 10px 30px;
-          background: @amePurpleLite;
+          //background: @amePurpleLite;
+          background-image: linear-gradient(45deg,#e37682 15%,#5f4d93 85%);
+          color: rgba(255,255,255,1);
           margin-top: 0px !important;
           .section-container {
             display: flex;
@@ -321,7 +334,7 @@
               width: 33%;
               .item-container {
                 padding: 5px;
-                border-bottom: 1px solid rgba(100,100,100,0.5);
+                border-bottom: 1px solid rgba(255,255,255,0.5);
                 .add-name { font-weight: bold; }
                 .add-title { }
               }

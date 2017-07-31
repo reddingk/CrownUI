@@ -15,7 +15,7 @@ components.component('cltHeader2', {
           {"title":"Lay Council","image":"imgs/clinton/subimgs/biblestudy.jpg"},{"title":"Men's Outreach","image":"imgs/clinton/subimgs/men1.jpg"},{"title":"Small Group Fellowship","image":"imgs/clinton/subimgs/smallGroup.jpg"}
         ]},
         {"title":"Our Pastor", "preview":false, "subSections":[]},
-        {"title":"Media", "preview":false, "subSections":[]},
+        {"title":"Gallery", "preview":false, "subSections":[]},
         {"title":"News & Events", "preview":false, "subSections":[]}
       ];
 

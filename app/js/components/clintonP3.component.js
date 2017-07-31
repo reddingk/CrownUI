@@ -7,13 +7,14 @@ components.component('clintonP3', {
       var ctrl = this;
 
       ctrl.homeImg = "imgs/clinton/pt6.jpg";
-
+    //easterflowers.jpg
       ctrl.infoCards = [
         {
-          "title":"Easter Service",
+          "title":"Clinton Homecoming",
           "icon":"class",
-          "content":[{"type":"text", "content":"Please Join Clinton"}, {"type":"text", "content":"Sunday, April 16, 2017 at 10:00 am for our annual"}, {"type":"text", "content":"Easter Program and Worship Service"}],
-          "background":{"type":"img", "value":"imgs/clinton/easterflowers.jpg"},
+          "textCover":true,
+          "content":[{"type":"text", "content":"Please Join Us On"}, {"type":"text", "content":"Sunday, August 13, 2017 at 10:00am - 4pm for Clinton A.M.E. Zion Church's Homecoming"}, {"type":"text", "content":"Location: Pint Isreal Park, 357 Frederick Avenue, Rockville, MD 20850"}],
+          "background":{"type":"img", "value":"imgs/clinton/Homecoming-Flyer.png"},
           "size":{ "height":2, "width":2, "text":"lrg"}
         },
         {

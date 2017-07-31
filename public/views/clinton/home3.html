@@ -23,7 +23,7 @@
 
               <div class="card-icon"><i class="material-icons">{{card.icon}}</i></div>
 
-              <div class="container-front {{ card.size.text }}">
+              <div class="container-front {{ card.size.text }}" ng-class="{ 'text-cover': card.textCover}">
                 <div class="title">{{card.title}}</div>
                 <div class="text-container">
                   <div class="text-object" ng-repeat="item in card.content">

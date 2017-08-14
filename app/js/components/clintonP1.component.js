@@ -30,7 +30,7 @@ components.component('clintonP1', {
       ctrl.churchHierarchy = [
         {"name":"Mid-Atlantic Episcopal District", "title":"Philadelphia & Baltimore Conference, Baltimore District"},
         {"name":"The Reverend Alyce R. Walker Johnson", "title":"Pastor"},
-        {"name":"The Reverend Lowell A. Williams", "title":"Presiding Elder, Baltimore District"},
+        {"name":"The Reverend Dr., Evalina Huggins", "title":"Presiding Elder, Baltimore District"},
         {"name":"Mrs. Devieta C. Moore", "title":"Missionary Supervisor, Mid-Atlantic II Episcopal District"},
         {"name":"The Right Reverend W. Darin Moore", "title":"Presiding Prelate, Mid-Atlantic II Episcopal District"}
       ];

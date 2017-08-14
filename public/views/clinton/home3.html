@@ -18,9 +18,9 @@
         <div class="cards-container">
           <div class="home-card col-{{card.size.height}} row-{{card.size.width}}" ng-repeat="card in $ctrl.infoCards">
             <div class="home-card-container">
-              <div class="container-back {{card.background.type}}" ng-if="card.background.type == 'img'" back-img={{card.background.value}}></div>
-              <div class="container-back {{card.background.type}}" ng-if="card.background.type == 'color'" ng-style="{background: card.background.value}"></div>
-
+              <div class="container-back {{card.backgroundImg.type}}" ng-if="card.backgroundImg != undefined" back-img={{card.backgroundImg.value}}></div>
+              <div class="container-back color" ng-if="card.backgroundColor != undefined" ng-style="{background: card.backgroundColor.value}"></div>
+            
               <div class="card-icon"><i class="material-icons">{{card.icon}}</i></div>
 
               <div class="container-front {{ card.size.text }}" ng-class="{ 'text-cover': card.textCover}">
@@ -88,7 +88,7 @@
           <div class="title">Upcoming Events</div>
 
           <div class="events-container">
-            <div class="event" ng-repeat="event in $ctrl.upcomingEvents">
+            <div class="event" ng-repeat="event in $ctrl.upcomingEvents" ng-click="$ctrl.open($event)">
               <div class="event-item event-date">{{event.date | date: 'dd MMM'}}</div>
               <div class="event-item event-title">{{event.title}}</div>
               <div class="event-item event-time">{{event.date | date: 'hh:mm a'}}</div>

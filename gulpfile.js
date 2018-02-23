@@ -8,6 +8,12 @@ var del = require('del');
 
 var config = {
   src: {
+    appDefault: [
+      'app/index.html'
+    ],
+    appViews:[
+      'app/views/**/*.html'
+    ],
     appJs:[
       'app/js/config/*.js',
       'app/js/components/*.js',
@@ -16,6 +22,9 @@ var config = {
     ],
     appLess: [
       'app/less/**/*.less'
+    ],
+    appImages: [
+      'app/images/**/*'
     ],
     libsJs: [
       'app/libs/jquery/dist/jquery.min.js',
@@ -29,14 +38,15 @@ var config = {
       'app/libs/angular-ui-router/release/angular-ui-router.min.js',
       'app/libs/angular-bootstrap/ui-bootstrap.min.js',
       'app/libs/angular-bootstrap/ui-bootstrap-tpls.min.js',
-      'app/libs/randomcolor/randomColor.js'
+      'app/libs/font-awesome/svg-with-js/js/fontawesome-all.min.js'
     ],
     libsCSS: [
       'app/libs/angular-material/angular-material.min.css',
       'app/libs/bootstrap/dist/css/bootstrap.min.css',
       'app/libs/font-awesome/css/font-awesome.min.css',
       'app/libs/animate.css/animate.min.css',
-      'app/libs/angular-bootstrap/ui-bootstrap-csp.css'
+      'app/libs/angular-bootstrap/ui-bootstrap-csp.css',
+      'app/libs/font-awesome/svg-with-js/css/fa-svg-with-js.css'
     ],
     libsFonts: [
       'app/libs/font-awesome/fonts/**',
@@ -44,16 +54,20 @@ var config = {
     ]
   },
   dest:{
+    appDefault:'public',
     appJs:'public/js',
     appCSS:'public/css',
-    appFonts:'public/fonts'
+    appFonts:'public/fonts',
+    appImages:'public/images',
+    appViews:'public/views'
   }
 };
 
 gulp.task('clean', function(){
   var files = [].concat(
 		config.dest.appJs,
-		config.dest.appCSS
+    config.dest.appCSS,
+    config.dest.appDefault
 	);
 
   return del.sync(files, {force: true });
@@ -76,6 +90,12 @@ gulp.task('app-less', function(){
       .pipe(gulp.dest(config.dest.appCSS));
 });
 
+gulp.task('app-images', function(){
+  // Move all fonts files into one the public fonts folder
+  return gulp.src(config.src.appImages)
+      .pipe(gulp.dest(config.dest.appImages));
+});
+
 gulp.task('lib-js', function(){
   // Bundle all JS Library files into one files
 
@@ -96,8 +116,20 @@ gulp.task('lib-fonts', function(){
       .pipe(gulp.dest(config.dest.appFonts));
 });
 
+gulp.task('app-views', function(){
+  // Move all view files into one the public view folder
+  return gulp.src(config.src.appViews)
+      .pipe(gulp.dest(config.dest.appViews));
+});
+
+gulp.task('app-default', function(){
+  // Move all view files into one the public view folder
+  return gulp.src(config.src.appDefault)
+      .pipe(gulp.dest(config.dest.appDefault));
+});
+
 gulp.task('build', function(done){
-  runSequence('clean', ['app-js', 'app-less', 'lib-js', 'lib-css','lib-fonts'], done);
+  runSequence('clean', ['app-js', 'app-less', 'app-images','lib-js', 'lib-css','lib-fonts', 'app-default','app-views'], done);
 });
 
 gulp.task('watch', function() {
@@ -106,7 +138,9 @@ gulp.task('watch', function() {
   gulp.watch(config.src.libsJs, ['lib-js']);
   gulp.watch(config.src.libsCSS, ['lib-css']);
   gulp.watch(config.src.libsFonts, ['lib-fonts']);
+  gulp.watch(config.src.appViews, ['app-views']);
+  gulp.watch(config.src.appViews, ['app-images']);
+  gulp.watch(config.src.appDefault, ['app-default']);
 });
 
-//gulp.task('default', ['build'], function () { });
 gulp.task('default', ['watch','build']);

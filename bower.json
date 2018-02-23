@@ -1,5 +1,5 @@
 {
-  "name": "Workbench",
+  "name": "crownui",
   "version": "1.0.0",
   "dependencies": {
     "bootstrap": "latest",
@@ -11,6 +11,6 @@
     "angular-ui-router": "1.0.0-beta.3",
     "angular-bootstrap": "^1.3.2",
     "angular-sanitize": "^1.5.8",
-    "randomcolor": "^0.4.4"
+    "jquery": "^3.3.1"
   }
 }

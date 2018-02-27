@@ -1,0 +1,28 @@
+searchbar {
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 100;
+    width: 100%;
+    color: rgba(255,255,255,1);
+    //.color1(background, 0.3);
+    background: linear-gradient(@color1, rgba(0,0,0,0));
+
+    font-size: 1.2rem;
+    .searchBarContainer {
+        padding: 12px 5%;
+        display: flex;
+        .bar-item {  
+            overflow-x: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;                      
+            &.search { width: 65%; }
+            &.location { width: 35%; }
+            
+            .section-component { 
+                display: inline-block;
+                 &+.section-component { margin-left: 5px;}
+            }
+        }    
+    }
+}

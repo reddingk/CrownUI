@@ -50,3 +50,22 @@ components.component('home', {
    },
    templateUrl: 'views/home.html'
 });
+
+components.component('searchbar', {
+    bindings: {},
+      require: {},
+      controller: function () {
+        var ctrl = this;
+     },
+     templateUrl: 'views/templates/_search.html'
+  });
+  
+components.component('uc', {
+    bindings: {},
+      require: {},
+      controller: function () {
+        var ctrl = this;
+     },
+     templateUrl: 'views/uc.html'
+  });
+  

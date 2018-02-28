@@ -4,11 +4,70 @@
     .banner {
         background: rgba(220,220,220,1);
         padding: 30px 0px 0px;
+        margin-bottom: 10px;
         .logo-container {
             width: 100%;
-            padding: 30px 15%;
+            padding: 30px 15% 15px;
             img { width: 100%;}
         }
+        .skyline-container {
+            width: 100%;
+            img{ width: 100%;}            
+        }
 
+    }
+
+    .list-section {
+        padding: 10px 0;
+        .section-title { padding: 0px 5%;}
+        .horizon-list {              
+            position: relative;
+            .horizon-container {          
+                position: relative;
+                overflow-x: auto;
+                overflow-y: hidden;
+                z-index: 1;
+                .list-container {
+                    white-space: nowrap; 
+                    padding-left:5%;                            
+                    .item {
+                        padding: 5px;
+                        display: inline-block;
+                        width: 200px;    
+                        height: 150px;                
+                        .info-section {
+                            border-radius: 5px;
+                            overflow: hidden;
+                            background: @color2;
+                            padding: 7px;    
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+
+                            .title { font-size: 1.3rem; font-weight: bold; text-overflow: ellipsis; overflow-x: hidden;} 
+                            .buis { padding-left: 5px; color: rgba(255,255,255,1);}
+                            .spacer { flex-grow: 1;}
+                            .price { text-align: right; font-weight: bold; font-size: 1.5rem; }
+                        }
+                        &.halos {
+                            .info-section {
+                                background: rgba(0,0,0,0);
+                                border: 4px solid @color2;
+                            }
+                        }
+                    }                
+                }                
+            }
+            .list-blur {
+                position: absolute;
+                top:0;
+                right: 0px;
+                height: 100%;
+                z-index: 2;
+                width: 30px;
+                background: linear-gradient(to right, rgba(0,0,0,0), rgba(250,250,250,0.5));
+            }
+        }
     }
 }

@@ -14,11 +14,12 @@ var config = {
     appViews:[
       'app/views/**/*.html'
     ],
-    appJs:[
+    appJs:[      
       'app/js/config/*.js',
+      'app/js/factories/*.js',
+      'app/js/services/*.js',
       'app/js/components/*.js',
-      'app/js/directives/*.js',
-      'app/js/services/*.js'
+      'app/js/directives/*.js'      
     ],
     appLess: [
       'app/less/**/*.less'

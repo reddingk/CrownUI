@@ -1,11 +1,16 @@
-<div class="searchBarContainer">
+<div class="searchBarContainer">    
     <div class="bar-item search">
+        <div class="section-component" ng-if="$ctrl.pageView != 0" ng-click="$ctrl.pageChange(0)"><i class="fas fa-angle-left"></i></div>
         <i class="fas fa-search section-component"></i>
-        <div class="search-txt section-component">Search Crown</div>
+        <div class="search-txt section-component"><input type="text" placeholder="Search Crown" ng-click="$ctrl.pageChange(1)"></div>
     </div>
 
     <div class="bar-item location">
         <i class="fas fa-map-marker-alt section-component"></i>
-        <div class="location-txt section-component">Ellicott City, MD.</div>
+        <div class="location-txt section-component">21043, MD.</div>
     </div>
+</div>
+
+<div class="searchPage" ng-if="$ctrl.pageView == 1">    
+    <div class="loading"><i class="fas fa-circle-notch fa-spin"></i></div>
 </div>

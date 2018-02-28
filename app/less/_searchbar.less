@@ -8,17 +8,33 @@ searchbar {
     //.color1(background, 0.3);
     background: linear-gradient(@color1, rgba(0,0,0,0));
 
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     .searchBarContainer {
+        position: relative;
+        z-index: 2;
         padding: 12px 5%;
         display: flex;
         .bar-item {  
             overflow-x: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;                      
-            &.search { width: 70%; }
+            &.search { 
+                width: 70%;
+                input {
+                    border: none;
+                    color: rgba(255,255,255,1);
+                    background: rgba(0,0,0,0);
+                    outline: none;
+                    &::placeholder { color: rgba(255,255,255,1); transition: 0.5s all ease;}
+                    &:focus { 
+                        border: none !important; 
+                        outline: none;
+                        &::placeholder { color:rgba(220,220,220,0.8);}
+                    }
+                }
+            }
             &.location { 
-                width: 30%;
+                width: 30%;                
                 .location-txt { font-size: 1rem;}
             }
             
@@ -27,5 +43,23 @@ searchbar {
                  &+.section-component { margin-left: 5px;}
             }
         }    
+    }
+
+    .searchPage {
+        position: absolute;
+        z-index: 1;
+        top:0;
+        left: 0;
+        height: 100vh;
+        width: 100%;       
+        background: rgba(50,50,50,1);
+
+        .loading {
+            font-size: 120px;
+            position: absolute;            
+            top:50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
 }
